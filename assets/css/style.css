@@ -1,0 +1,58 @@
+*{
+    font-family: 'Architects Daughter', Arial, Helvetica, sans-serif !important;
+}
+
+body{
+    
+    background: linear-gradient(223deg, #58c6cc, #a145ec);
+    background-size: 400% 800%;
+    -webkit-animation: BackgroundGradient 13s ease infinite;
+    -moz-animation: BackgroundGradient 13s ease infinite;
+    -o-animation: BackgroundGradient 13s ease infinite;
+    animation: BackgroundGradient 13s ease infinite;
+}
+.display-4{
+    padding-top: 5% !important;
+    color:white !important;
+}
+#gameboard{
+}
+
+/*
+    Responsive Breakpoints
+*/
+
+@media (max-width:1100px){
+    .display-4{
+        font-size:5vw !important;
+    }
+}
+
+
+
+
+
+/*
+    Animations
+*/
+
+@-webkit-keyframes BackgroundGradient {
+    0%{background-position:97% 0%}
+    50%{background-position:4% 100%}
+    100%{background-position:97% 0%}
+}
+@-moz-keyframes BackgroundGradient {
+    0%{background-position:97% 0%}
+    50%{background-position:4% 100%}
+    100%{background-position:97% 0%}
+}
+@-o-keyframes BackgroundGradient {
+    0%{background-position:97% 0%}
+    50%{background-position:4% 100%}
+    100%{background-position:97% 0%}
+}
+@keyframes BackgroundGradient { 
+    0%{background-position:97% 0%}
+    50%{background-position:4% 100%}
+    100%{background-position:97% 0%}
+}
