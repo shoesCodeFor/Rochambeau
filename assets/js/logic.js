@@ -5,6 +5,11 @@
  */
 
  const gameMoves = ['r', 'p', 's'];
+ var gameObj = {
+    bestOf: 0,
+    computerWins: 0,
+    userWins: 0
+ };
 
  const playerKey = document.addEventListener('keyup', (e)=>{playARound(e.key)});
 
@@ -56,4 +61,8 @@ function playARound(keyEntered){
             break;
         }     
     }
+}
+
+const keepScore = function (user){
+
 }
