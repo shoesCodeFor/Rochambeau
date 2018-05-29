@@ -18,6 +18,11 @@ body{
 #gameboard{
 }
 
+.navbar-brand{
+    font-size:3vw;
+    font-size: 3vh;
+}
+
 /*
     Responsive Breakpoints
 */
