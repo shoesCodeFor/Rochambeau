@@ -16,11 +16,12 @@ body{
     color:white !important;
 }
 #gameboard{
+    margin-top: 15vh;
 }
 
 .navbar-brand{
-    font-size:3vw;
-    font-size: 3vh;
+    font-size:5vw !important;
+    font-size: 5vh !important;
 }
 
 /*
