@@ -5,7 +5,8 @@
 body{
     
     background: linear-gradient(223deg, #58c6cc, #a145ec);
-    background-size: 400% 800%;
+    background-size: 800% 800%;
+    background-position-y: 200%;
     -webkit-animation: BackgroundGradient 13s ease infinite;
     -moz-animation: BackgroundGradient 13s ease infinite;
     -o-animation: BackgroundGradient 13s ease infinite;
@@ -15,13 +16,19 @@ body{
     padding-top: 5% !important;
     color:white !important;
 }
+#gameWrap .jumbotron{
+    background-color: rgba(0,0,0,0.01) !important;
+}
+
 #gameboard{
     margin-top: 15vh;
 }
+#gameboard img{
+    width: 30vw;
+}
 
 .navbar-brand{
-    font-size:5vw !important;
-    font-size: 5vh !important;
+    font-size:3vw !important;
 }
 
 /*
