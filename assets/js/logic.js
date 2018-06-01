@@ -9,7 +9,18 @@
     bestOf: 0, // 0 means unlimited
     computerWins: 0,
     userWins: 0,
-    winnerOfRound: true
+    winnerOfRound: true,
+    incUserWin: () =>{
+        this.userWins++;
+    },
+    incCompWin: ()=>{
+        this.computerWin++;
+    },
+    resetGame: ()=>{
+        this.userWins = 0;
+        this.computerWins = 0;
+        this.bestOf = 0;
+    } 
  };
 
  const playerKey = document.addEventListener('keyup', (e)=>{playARound(e.key)});
