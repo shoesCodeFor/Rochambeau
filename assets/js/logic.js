@@ -10,17 +10,23 @@
     computerWins: 0,
     userWins: 0,
     winnerOfRound: true,
-    incUserWin: () =>{
+    playerWin: ()=>{
         this.userWins++;
+        this.winnerOfRound = true;
     },
-    incCompWin: ()=>{
-        this.computerWin++;
+    computerWin: (game)=>{
+        this.computerWins++;
+        this.winnerOfRound = false;
     },
     resetGame: ()=>{
         this.userWins = 0;
         this.computerWins = 0;
         this.bestOf = 0;
-    } 
+    },
+    postMessage: (message)=>{
+        $('.game-message').html(message);
+    }
+
  };
 
  var gameMessages = {
@@ -110,21 +116,6 @@ function playARound(keyEntered){
         }     
     }
 }
-const playerWin = (game)=>{
-    game.incUserWin;
-    game.winnerOfRound = true;
-
-}
-const computerWin = (game)=>{
-    game.incCompWin;
-    game.winnerOfRound = false;
-}
-
-
-const postMessage = (message)=>{
-    $('.game-message').html(message);
-}
-
 
 const keepScore = function (game){
     if(game.winnerOfRound){
