@@ -23,6 +23,18 @@
     } 
  };
 
+ var gameMessages = {
+     "ss": 'It\'s a Tie.  Both picked Scissors.',
+     "rr": 'It\'s a Tie.  Both picked Rock.',
+     "pp": 'It\'s a Tie.  Both picked Paper.',
+     "sr": 'You Win! Rock beats Scissors.',
+     "ps": 'You Win! Scissors beat Paper.',
+     "rp": 'You Win!  Paper beats Rock.',
+     "rs": 'You Lose. Rock beats Scissors.',
+     "sp": 'You Lose.  Scissors beat Paper.',
+     "pr": 'You Lose.  Paper beats Rock.'
+ }
+
  const playerKey = document.addEventListener('keyup', (e)=>{playARound(e.key)});
 
  
@@ -99,12 +111,12 @@ function playARound(keyEntered){
     }
 }
 const playerWin = (game)=>{
-    game.userWins++;
+    game.incUserWin;
     game.winnerOfRound = true;
 
 }
-const computerWin = ()=>{
-    game.computerWins++;
+const computerWin = (game)=>{
+    game.incCompWin;
     game.winnerOfRound = false;
 }
 
@@ -116,7 +128,13 @@ const postMessage = (message)=>{
 
 const keepScore = function (game){
     if(game.winnerOfRound){
-        $('.playerScore').html(game.userWins)
+        $('.playerScore').html(game.userWins);
+    }
+    else if(!game.winnerOfRound){
+        $('.playerScore').html(game.userWins);
+    }
+    else{
+        $('.playerScore').addClass();
     }
     
 }
