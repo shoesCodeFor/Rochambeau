@@ -1,7 +1,7 @@
 /**
  * Game lofic for Rochambeau
  * By Schuyler Ankele
- * May 2018
+ * June 2018
  */
 
  const gameMoves = ['r', 'p', 's'];
@@ -13,10 +13,12 @@
     playerWin: ()=>{
         this.userWins++;
         this.winnerOfRound = true;
+        keepScore(this);
     },
     computerWin: (game)=>{
         this.computerWins++;
         this.winnerOfRound = false;
+        keepScore(this);
     },
     resetGame: ()=>{
         this.userWins = 0;
@@ -71,23 +73,21 @@ function playARound(keyEntered){
         case 'sr':{
             console.log('You Win! Rock beats Scissors.');
             postMessage('You Win! Rock beats Scissors.');
-            gameObj.userWins++;
-            gameObj.winnerOfRound = true;
+            gameObj.playerWin();
             keepScore(gameObj);
             break;
         }
         case 'ps':{
             console.log('You Win! Scissors beat Paper.');
             postMessage('You Win! Scissors beat Paper.');
-            gameObj.userWins++;
-            gameObj.winnerOfRound = true;
+            gameObj.playerWin();
             keepScore(gameObj);
             break;
         }
         case 'rp':{
             console.log('You Win!  Paper beats Rock.');
             postMessage('You Win!  Paper beats Rock.');
-            
+            gameObj.playerWin();
             keepScore(gameObj);
             break;
         } 
@@ -122,10 +122,10 @@ const keepScore = function (game){
         $('.playerScore').html(game.userWins);
     }
     else if(!game.winnerOfRound){
-        $('.playerScore').html(game.userWins);
+        $('.playerScore').html(game.computerWins);
     }
     else{
-        $('.playerScore').addClass();
+        $('.playerScore').addClass('tie');
     }
     
 }
